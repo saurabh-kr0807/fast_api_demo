@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "37d0ca84-43fb-4308-9dad-2fbd7322dfa0",
+		"name": "FastApiDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "set_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Sample Book 2\",\n    \"author\": \"John Doe dummy\",\n    \"publication_year\": 2021\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/books"
+			},
+			"response": []
+		},
+		{
+			"name": "get_books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/books"
+			},
+			"response": []
+		},
+		{
+			"name": "update_books",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Sample Book 3\",\n    \"author\": \"John Doe 1\",\n    \"publication_year\": 2024\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/books/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/books/2"
+			},
+			"response": []
+		},
+		{
+			"name": "get_books_by_author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/?author=John Doe dummy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "John Doe dummy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_books_by_pub_year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/?publication_year=2022",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "publication_year",
+							"value": "2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set_review_for_book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Good books\",\n    \"rating\": 7,\n    \"book_id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/reviews/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_review_by_book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/reviews/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update_review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Good books\",\n    \"rating\": 7,\n    \"book_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/reviews/3"
+			},
+			"response": []
+		},
+		{
+			"name": "update_review Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Good books\",\n    \"rating\": 7,\n    \"book_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/reviews/3"
+			},
+			"response": []
+		}
+	]
+}
